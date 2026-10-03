@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Практическая работа 11: Работа с таблицей</title>
+    
+    <!-- Подключение файла стилей CSS -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Внешние библиотеки для экспорта (Задания 1 и 2) -->
+    <!-- SheetJS для Excel -->
+    <script src="https://jsdelivr.net"></script>
+    <!-- html2pdf.js для PDF -->
+    <script src="https://cloudflare.com"></script>
+</head>
+<body>
+
+    <h2>Практическая работа 11 «Работа с таблицей»</h2>
+
+    <!-- Блок управления / Кнопки экспорта (Задания 1 и 2) -->
+    <div class="button-panel">
+        <button class="btn-excel" id="exportExcelBtn">Import as Excel</button>
+        <button class="btn-json" id="exportJsonBtn">TO JSON</button>
+        <button class="btn-csv" id="exportCsvBtn">TO CSV</button>
+        <button class="btn-pdf" id="exportPdfBtn">TO PDF</button>
+    </div>
+
+    <!-- Контейнер с таблицей (Задание 3) -->
+    <div class="table-container" id="pdf-content">
+        <table id="myTable">
+            <thead>
+                <tr>
+                    <!-- data-type указывает скрипту, как именно сортировать столбец (как текст или как числа) -->
+                    <th data-type="string">Имя поля 1</th>
+                    <th data-type="string">Имя поля 2</th>
+                    <th data-type="string">Имя поля 3</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Александрова Александра Александровна</td>
+                    <td>ребенок</td>
+                    <td>нет сайта</td>
+                </tr>
+                <tr>
+                    <td>Зеленский Владимир Александрович</td>
+                    <td>безработный</td>
+                    <td>president.gov.ua</td>
+                </tr>
+                <tr>
+                    <td>Кузьменко Иван Кузьмич</td>
+                    <td>студент ХПИ</td>
+                    <td>белоцерковский портал</td>
+                </tr>
+                <tr>
+                    <td>Сидоров Сидор Сидорович</td>
+                    <td>безработный</td>
+                    <td>Microsoft.com</td>
+                </tr>
+                <tr>
+                    <td>Шимпанзе Путинка</td>
+                    <td>обезьяна</td>
+                    <td>зоопарк</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Подключение файла со скриптами JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
